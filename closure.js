@@ -37,7 +37,7 @@ console.log(sum(1)(2));
 
 /**
  * 
- *  A function remebers it scopes and clouser and from where it need to access the variables
+ *  A function remembers it scopes and closure and from where it need to access the variables
  *  try running below code in debug mode with different conditions and see the property named [[Scopes]] of the variable army.
  *                                 very important
  */
