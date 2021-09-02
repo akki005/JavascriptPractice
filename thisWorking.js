@@ -31,7 +31,7 @@ var cat = {
           nestedFunction();
 
 
-        // this function is invoked without any context so it will have this bind to window object        
+        // this function is invoked without any context so it will have this bind to global object        
          /*  nestedFunction =  function(){
              //console.log(this);
              console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); //prints in correctly
@@ -40,5 +40,17 @@ var cat = {
          //nestedFunction.call(this); */
     }
 }
-cat.printInfo()
-cat.eatFood();
+// cat.printInfo()
+// cat.eatFood();
+
+
+var cat2 = {
+    name: "Gus",
+    color: "gray",
+    age: 15,
+    eatFood: ()=> {
+        console.log(this.name);
+    }
+}
+
+cat2.eatFood()

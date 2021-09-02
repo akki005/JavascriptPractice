@@ -17,6 +17,10 @@
  * 
  * 
  * A new function Lexical Environment is created each time a function runs. And if a function is called multiple times, then each invocation will have its own Lexical Environment, with local variables and parameters specific for that very run.
+ * 
+ * 
+ * outer lexical environment is in which environment function is declared.
+ * 
  */
 
 
