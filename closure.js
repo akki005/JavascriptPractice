@@ -13,15 +13,15 @@
 let phrase = "Hello";
 
 function test() {
-    let user = "John";
+  let user = "John";
 
-    return function() {// sayhi is inner function and a closure
-        let x = 1;
-        console.log(`${phrase}, ${user}`);
-    }
+  return function () {// sayhi is inner function and a closure
+    let x = 1;
+    console.log(`${phrase}, ${user}`);
+  }
 }
 
-let x=test();
+let x = test();
 x()
 
 
@@ -90,3 +90,23 @@ function b(){
 
  output ->> 1
  */
+
+function fn1() {
+  var i = 500;
+  ++i;
+  for (var i = 1; i <= 3; ++i) {
+  }
+  console.log(i);//4
+}
+
+fn1()
+
+function test()  {
+  a = 1;
+  return function () {
+    ++a;
+    console.log(a)
+  }
+}
+let test1 = test();
+test1()//2

@@ -25,32 +25,20 @@ var cat = {
 
           //As arrow function does not create their own "this". so by they will refer "this" of their encloser
           nestedFunction =  ()=>  {
-              console.log(this);
+              console.log("this of nestedFunction",this);
               console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); //prints correctly
           }
           nestedFunction();
 
 
         // this function is invoked without any context so it will have this bind to global object        
-         /*  nestedFunction =  function(){
-             //console.log(this);
+          nestedFunction2 =  function(){
+             console.log("this of nestedFunction2",this);
              console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); //prints in correctly
          }
-         nestedFunction(); 
-         //nestedFunction.call(this); */
+         nestedFunction2(); 
+         //nestedFunction.call(this);
     }
 }
-// cat.printInfo()
-// cat.eatFood();
-
-
-var cat2 = {
-    name: "Gus",
-    color: "gray",
-    age: 15,
-    eatFood: ()=> {
-        console.log(this.name);
-    }
-}
-
-cat2.eatFood()
+cat.printInfo()
+cat.eatFood();

@@ -49,3 +49,24 @@ console.log(Animal.prototype.hasOwnProperty("eat"));//false
 
 
 
+
+
+let a = {
+    a: 1,
+    geta: () => {
+        return this.a;
+    }
+}
+function ABC() {
+    let a = 1;
+    this.a = "A"
+}
+
+ABC.prototype.geta = () => {
+    return this.a;//undefined
+}
+ABC.prototype.name = 'XYZ'
+
+let abs = new ABC();
+console.log("abs.name", abs.name);//'xyz'
+console.log("abs.geta()", abs.geta());//undefined

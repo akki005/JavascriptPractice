@@ -59,3 +59,15 @@ let myobj = {
 }
 
 myobj.render();
+
+
+
+function hello() {
+    console.log(this);//name:niranjan
+    setTimeout(function () {
+        console.log("inside this",this.name)//undefined
+    }, 100)
+}
+
+hello.call({ name: 'Niranjan' }) //
+

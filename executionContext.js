@@ -1,4 +1,4 @@
-console.log(a);// a is not defined - ReferenceError
+// console.log(a);// a is not defined - ReferenceError
 
 //console.log(a) // undefined
 // var a; 
@@ -18,3 +18,8 @@ output --> a
 
 // console.log(a) 
 // var a; 
+
+testFn();//not a function, at this line only declaration is available of variable testFn but not definition or assignment
+var testFn = () => {
+    console.log("Hello");
+}
